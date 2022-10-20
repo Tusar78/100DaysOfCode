@@ -17,16 +17,59 @@
 // reportWebVitals();
 
 import React from "react";
+import ReactDOM from "react-dom";
 
 // const element = React.createElement("h2", null, 'Hello World');
-const element = (
-  <div className="container">
-    <h2 className="title">Welcome to React World</h2>
-    <span className="sub-title">Since 2013 -by Jordan Walke</span>
-  </div>
-)
+// setInterval(() => {
+//   const element = (
+//     <div className="container">
+//       <h2>Time: {new Date().toLocaleTimeString()}</h2>
+//       <h2 className="title">Welcome to React World</h2>
+//       <span className="sub-title">Since 2013 -by Jordan Walke</span>
+//     </div>
+//   )
+//   ReactDOM.render(element, document.getElementById('root'));
+// }, 1000);
 
-console.log(element);
+// const Clock = ({locale}) => {
+//   return (
+//     <div className="container">
+//       <h2>Time: {new Date().toLocaleTimeString(locale)}</h2>
+//       <h2 className="title">Welcome to React World</h2>
+//       <span className="sub-title">Since 2013 -by Jordan Walke</span>
+//     </div>
+//   );
+// };
+
+// class Clock {
+//   print() {
+//     return (
+//       <div className="container">
+//         <h2>Time: {new Date().toLocaleTimeString()}</h2>
+//         <h2 className="title">Welcome to React World</h2>
+//         <span className="sub-title">Since 2013 -by Jordan Walke</span>
+//       </div>
+//     );
+//   }
+// }
+
+// const ClockComponent = new Clock();
+
+class Clock extends React.Component {
+  render() {
+    const {locale} = this.props;
+
+    return (
+      <div className="container">
+        <h2>Time: {new Date().toLocaleTimeString(locale)}</h2>
+        <h2 className="title">Welcome to React World</h2>
+        <span className="sub-title">Since 2013 -by Jordan Walke</span>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<Clock locale="bn-BD" />, document.getElementById("root"));
 
 /*
 {
