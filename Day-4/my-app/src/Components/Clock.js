@@ -17,12 +17,10 @@ export class Clock extends Component {
     clearInterval(this.clockTimer);
   }
 
-
   render() {
-    const { locale } = this.props;
     return (
       <div className="clock">
-        <h2>{this.state.date.toLocaleTimeString(locale)}</h2>
+        <h2>{this.state.date.toLocaleTimeString()}</h2>
       </div>
     );
   }

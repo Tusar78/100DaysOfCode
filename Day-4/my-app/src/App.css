@@ -17,12 +17,12 @@ body {
 .clock {
   width: 300px;
   aspect-ratio: 21/9;
-  background: #ffffff;
+  background: #fff;
   border-radius: 16px;
-  box-shadow: 7px 7px 0 #d7cccc;
+  box-shadow: 7px 7px 0 #cfd9ff;
   display: grid;
   place-items: center;
-  border: 1px solid #d7cccc;
+  border: 1px solid #cfd9ff;
 }
 
 .clock h2 {
