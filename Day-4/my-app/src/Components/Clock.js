@@ -15,9 +15,9 @@ export class Clock extends Component {
     clearInterval(this.clockTimer);
   }
 
-  handleClick = () => {
+  handleClick(locale) {
     this.setState({
-      locale: 'en-US'
+      locale,
     })
   }
 
@@ -25,7 +25,7 @@ export class Clock extends Component {
     const { date, locale } = this.state;
     return (
       <>
-        <button type="button" onClick={this.handleClick}>English</button>
+        <button type="button" onClick={this.handleClick.bind(this, 'en-US')}>English</button>
         <div className="clock">
           <h2>{date.toLocaleTimeString(locale)}</h2>
         </div>
