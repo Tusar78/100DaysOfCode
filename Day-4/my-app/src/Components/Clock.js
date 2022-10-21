@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 export class Clock extends Component {
-  state = { date: new Date() };
+  state = { date: new Date(), locale: 'bn-BD' };
 
   tick() {
     this.setState({ date: new Date() });
@@ -15,11 +15,21 @@ export class Clock extends Component {
     clearInterval(this.clockTimer);
   }
 
+  handleClick = () => {
+    this.setState({
+      locale: 'en-US'
+    })
+  }
+
   render() {
+    const { date, locale } = this.state;
     return (
-      <div className="clock">
-        <h2>{this.state.date.toLocaleTimeString()}</h2>
-      </div>
+      <>
+        <button type="button" onClick={this.handleClick}>English</button>
+        <div className="clock">
+          <h2>{date.toLocaleTimeString(locale)}</h2>
+        </div>
+      </>
     );
   }
 }
