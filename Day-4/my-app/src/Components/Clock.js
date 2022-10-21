@@ -1,25 +1,21 @@
 import React, { Component } from "react";
 
 export class Clock extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { date: new Date(), locale: 'bn-BD' };
-    this.handleClick = this.handleClick.bind(this);
-  }
+  state = { date: new Date(), locale: 'bn-BD' };
 
-  tick() {
+  tick = () => {
     this.setState({ date: new Date() });
   }
 
-  componentDidMount() {
+  componentDidMount = () => {
     this.clockTimer = setInterval(() => this.tick(), 1000);
   }
 
-  componentWillUnmount() {
+  componentWillUnmount = () => {
     clearInterval(this.clockTimer);
   }
 
-  handleClick() {
+  handleClick = () => {
     this.setState({
       locale: 'en-US'
     })
