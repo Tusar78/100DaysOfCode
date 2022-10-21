@@ -4,9 +4,7 @@ export class Clock extends Component {
   state = { date: new Date() };
 
   tick() {
-    this.setState({
-      date: new Date()
-    })
+    this.setState({ date: new Date() });
   }
 
   componentDidMount() {
