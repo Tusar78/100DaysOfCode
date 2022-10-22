@@ -30,9 +30,9 @@ export class Clock extends Component {
       <div className="clock">
         <h2>{date.toLocaleTimeString(locale)}</h2>
         {locale === "en-US" ? (
-          <Button change={this.handleClick} locale="bn-BD" show={false} />
+          <Button change={this.handleClick} locale="bn-BD" show={false} enable={false} />
         ) : (
-          <Button change={this.handleClick} locale="en-US" show />
+          <Button change={this.handleClick} locale="en-US" show enable/>
         )}
       </div>
     );
