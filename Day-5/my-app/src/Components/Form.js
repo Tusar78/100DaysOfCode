@@ -22,11 +22,18 @@ export class Form extends Component {
       });
     }
   };
+
+  onSubmitHandle = (e) => {
+    const { title, text, library, checking } = this.state;
+    e.preventDefault();
+    console.log(title, text, library, checking);
+  }
+
   render() {
     const { title, text, library, checking } = this.state;
     return (
       <div>
-        <form>
+        <form onSubmit={this.onSubmitHandle}>
           <input
             type="text"
             placeholder="Enter anything"
@@ -53,6 +60,8 @@ export class Form extends Component {
             />
             <label htmlFor="remember">Remember Me</label>
           </div>
+
+          <button type="submit">Submit</button>
         </form>
       </div>
     );
