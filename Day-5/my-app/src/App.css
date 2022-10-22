@@ -13,7 +13,8 @@ body {
 
 button, 
 input,
-textarea {
+textarea,
+select {
   padding: .25rem 1.25rem;
   background: #fff;
   border: 1px solid #ccc;
@@ -30,6 +31,11 @@ input,
 textarea {
   cursor: text;
   margin-bottom: .875rem;
+  display: block;
+}
+
+select {
+  margin-bottom: .875rem;
 }
 
 
@@ -42,4 +48,13 @@ textarea {
 .form-group {
   border: 1px solid orange;
   padding: .5rem;
+}
+
+.checkbox-wrap {
+  display: flex;
+}
+
+label {
+  padding-left: .5rem;
+  margin-top: -3px;
 }
