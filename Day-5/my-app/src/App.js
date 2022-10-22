@@ -1,10 +1,11 @@
 import './App.css';
-import Clock from './Components/Clock';
+import ClockList from './Components/ClockList';
 
 function App() {
+  const quantities = [1, 2, 3];
   return (
     <>
-      <Clock />
+      <ClockList quantities={quantities} />
     </>
   );
 }
