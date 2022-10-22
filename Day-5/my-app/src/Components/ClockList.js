@@ -1,10 +1,12 @@
 import React from 'react'
 import Clock from './Clock'
 
-const ClockList = () => {
+const ClockList = ({ quantities }) => {
   return (
     <>
-     <Clock />
+      {
+        quantities.map(quantity => <Clock key={quantity} />)
+      }
     </>
   )
 }

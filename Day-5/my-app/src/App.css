@@ -16,4 +16,9 @@ button {
   background: #fff;
   border: 1px solid #ccc;
   border-radius: .25px;
+  cursor: pointer;
+}
+
+div {
+  margin: 1rem;
 }
