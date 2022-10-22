@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 export class Form extends Component {
-  state = { title: "", text: "", library: "" };
+  state = { title: "", text: "", library: "", checking: true };
 
   handleChange = (e) => {
     if (e.target.type === "text") {
@@ -16,10 +16,14 @@ export class Form extends Component {
       this.setState({
         library: e.target.value,
       });
+    } else if (e.target.type === "checkbox") {
+      this.setState({
+        checking: e.target.checked,
+      });
     }
   };
   render() {
-    const { title, text, library } = this.state;
+    const { title, text, library, checking } = this.state;
     return (
       <div>
         <form>
@@ -41,7 +45,12 @@ export class Form extends Component {
             <option value="Vue">Vue</option>
           </select>
           <div className="checkbox-wrap">
-            <input type="checkbox" id="remember"/>
+            <input
+              type="checkbox"
+              id="remember"
+              checked={checking}
+              onChange={this.handleChange}
+            />
             <label htmlFor="remember">Remember Me</label>
           </div>
         </form>

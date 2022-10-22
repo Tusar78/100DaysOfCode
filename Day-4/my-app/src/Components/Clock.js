@@ -1,10 +1,12 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 
 export class Clock extends Component {
-  state = { date: new Date(), locale: 'bn-BD' };
+  state = { date: new Date(), locale: true };
 
   tick = () => {
-    this.setState({ date: new Date() });
+    this.setState({
+      date: new Date()
+    })
   }
 
   componentDidMount = () => {
@@ -15,23 +17,22 @@ export class Clock extends Component {
     clearInterval(this.clockTimer);
   }
 
-  handleClick = (locale) => {
-    this.setState({
-      locale,
-    })
+  handleClick = () => {
+    this.setState(prevState => ({
+      locale: !prevState.locale
+    }))
   }
 
   render() {
-    const { date, locale } = this.state;
+    const { date, locale } = this.state; 
+
     return (
-      <>
-        <button type="button" onClick={() => this.handleClick('en-US')}>English</button>
-        <div className="clock">
-          <h2>{date.toLocaleTimeString(locale)}</h2>
-        </div>
-      </>
-    );
+      <div className='clock'>
+        <button type='button' onClick={this.handleClick}>{locale ? 'Bn' : 'En'}</button>
+        <h2>{locale ? date.toLocaleTimeString('en-US') : date.toLocaleTimeString('bn-BD')}</h2>
+      </div>
+    )
   }
 }
 
-export default Clock;
+export default Clock
