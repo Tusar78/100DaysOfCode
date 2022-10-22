@@ -12,7 +12,8 @@ body {
 }
 
 button, 
-input {
+input,
+textarea {
   padding: .25rem 1.25rem;
   background: #fff;
   border: 1px solid #ccc;
@@ -25,12 +26,20 @@ div {
   margin-bottom: 1rem;
 }
 
-input {
+input,
+textarea {
   cursor: text;
+  margin-bottom: .875rem;
 }
 
 
 .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.form-group {
+  border: 1px solid orange;
+  padding: .5rem;
 }

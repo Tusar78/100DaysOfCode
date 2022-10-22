@@ -1,25 +1,40 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 export class Form extends Component {
-  state = { filled : '' }
+  state = { title: "", text: "" };
 
   handleChange = (e) => {
-    console.log(e.target.value);
-    this.setState({
-      filled: e.target.value
-    })
-  }
+    if (e.target.type === "text") {
+      this.setState({
+        title: e.target.value,
+      });
+    } else if (e.target.type === 'textarea') {
+      this.setState({
+        text: e.target.value,
+      });
+    }
+  };
   render() {
-    const {filled} = this.state;
+    const { title, text } = this.state;
     return (
       <div>
         <form>
-          <input type="text" placeholder='Enter anything' value={filled} onChange={this.handleChange} />
-          <p>{filled}</p>
+          <input
+            type="text"
+            placeholder="Enter anything"
+            value={title}
+            onChange={this.handleChange}
+          />
+          <textarea
+            name="textarea"
+            placeholder="Enter anything"
+            value={text}
+            onChange={this.handleChange}
+          ></textarea>
         </form>
       </div>
-    )
+    );
   }
 }
 
-export default Form
+export default Form;

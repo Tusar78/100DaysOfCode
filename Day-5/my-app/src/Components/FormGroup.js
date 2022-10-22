@@ -3,7 +3,7 @@ import Form from './Form';
 
 const FormGroup = () => {
   return (
-    <div>
+    <div className='form-group'>
       <Form />
     </div>
   );
