@@ -14,7 +14,7 @@ const TemperatureInput = ({ temperature, handleTemperature, scale }) => {
         name="temperature"
         placeholder="Enter temperature"
         value={temperature}
-        onChange={(e, scale) => handleTemperature()}
+        onChange={(e) => handleTemperature(e, scale)}
       />
     </fieldset>
   );

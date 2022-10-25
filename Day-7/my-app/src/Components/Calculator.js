@@ -1,8 +1,10 @@
 import React, { Component } from "react";
+import { convert, toCelsius, toFahrenheit } from "../lib/converter";
+import BoilingVerdict from "./BoilingVerdict";
 import TemperatureInput from "./TemperatureInput";
 
 export class Calculator extends Component {
-  state = { temperature: "", scale: "" };
+  state = { temperature: "", scale: "c" };
 
   handleTemperature = (e, scale) => {
     this.setState({
@@ -12,19 +14,23 @@ export class Calculator extends Component {
   };
 
   render() {
-    const { temperature} = this.props;
+    const { temperature, scale } = this.state;
+    const celsius = scale === 'f' ? convert(temperature, toCelsius) : temperature;
+    const fahrenheit = scale === 'c' ? convert(temperature, toFahrenheit) : temperature;
     return (
       <>
         <TemperatureInput
-          temperature={temperature}
+          temperature={fahrenheit}
           handleTemperature={this.handleTemperature}
           scale="f"
         />
         <TemperatureInput
-          temperature={temperature}
+          temperature={celsius}
           handleTemperature={this.handleTemperature}
           scale="c"
         />
+
+        {temperature && <BoilingVerdict temperature={temperature} />}
       </>
     );
   }
