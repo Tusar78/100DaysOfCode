@@ -1,9 +1,16 @@
-import React from "react";
+import React from 'react';
 
-const Text = ({ addEmoji }) => {
-  const text = `I'm JavaScript popular library`;
+const Text = ({addEmoji}) => {
+  const text = "I Love JavaScript";
 
-  return <div>{addEmoji ? addEmoji(text, "💪") : text}</div>;
+  
+  return (
+    <>
+      {
+        addEmoji ? addEmoji(text, '💎') : text
+      }
+    </>
+  );
 };
 
 export default Text;
