@@ -9,10 +9,14 @@ export class Counter extends Component {
     }))
   }
   render() {
-    const { render } = this.props;
+    const { render, children } = this.props;
     const {click } = this.state;
     return (
-      render(click, this.handleClick)
+      <>
+        {
+          render ? render(click, this.handleClick) : children(click, this.handleClick)
+        }
+      </>      
     )
   }
 }

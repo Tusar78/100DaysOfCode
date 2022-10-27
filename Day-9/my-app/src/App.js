@@ -1,6 +1,7 @@
 import "./App.css";
 import ClickCounter from "./Components/ClickCounter";
 import Counter from "./Components/Counter";
+import HoverCounter from "./Components/HoverCounter";
 
 function App() {
   return (
@@ -11,6 +12,12 @@ function App() {
           <ClickCounter click={click} handleClick={handleClick} />
         )}
       />
+
+      <Counter>
+        {
+          (click, handleClick) => <HoverCounter click={click} handleClick={handleClick} />
+        }
+      </Counter>
     </div>
   );
 }
