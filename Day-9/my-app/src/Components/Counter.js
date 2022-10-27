@@ -1,10 +1,18 @@
 import React, { Component } from 'react'
 
 export class Counter extends Component {
-  state
+  state = { click: 0};
+
+  handleClick = () => {
+    this.setState((prevState) => ({
+      click: prevState.click + 1
+    }))
+  }
   render() {
+    const { render } = this.props;
+    const {click } = this.state;
     return (
-      <div>Counter</div>
+      render(click, this.handleClick)
     )
   }
 }

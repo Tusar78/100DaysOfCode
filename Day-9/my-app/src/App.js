@@ -1,13 +1,16 @@
-import './App.css';
-import Click from './Components/HOCwithHooks/Click';
-import Hover from './Components/HOCwithHooks/Hover';
+import "./App.css";
+import ClickCounter from "./Components/ClickCounter";
+import Counter from "./Components/Counter";
 
 function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <h2>Hello World!</h2>
-      <Click />
-      <Hover />
+      <Counter
+        render={(click, handleClick) => (
+          <ClickCounter click={click} handleClick={handleClick} />
+        )}
+      />
     </div>
   );
 }
