@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import "./App.css";
+import React from 'react';
+import ClickCounter from './Components/ClickCounter';
+import HoverCounter from './Components/HoverCounter';
 
-export class App extends Component {
-  render() {
-    return (
-      <>
-        <h2>Hello World</h2>
-      </>
-    );
-  }
-}
+const App = () => {
+  return (
+    <div>
+      <ClickCounter />
+      <HoverCounter />
+    </div>
+  );
+};
 
 export default App;
