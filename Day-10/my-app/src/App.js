@@ -1,15 +1,12 @@
 import React from 'react';
 import Click from './Components/Click';
-import User from './Components/User';
-import Hover from './Components/Hover';
+import Counter from './Components/Counter';
 import './App.css'
 
 const App = () => {
   return (
     <div>
-      <Click />
-      <Hover />
-      <User name={(isLoggedIn) => isLoggedIn ? 'Tusar' : 'Guest'} />
+      <Counter render={(count, incrementCount) => <Click count={count} incrementCount={incrementCount}/>} />
     </div>
   );
 };
