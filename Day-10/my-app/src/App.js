@@ -9,7 +9,7 @@ const App = () => {
     <div>
       <Click />
       <Hover />
-      <User />
+      <User name={(isLoggedIn) => isLoggedIn ? 'Tusar' : 'Guest'} />
     </div>
   );
 };
