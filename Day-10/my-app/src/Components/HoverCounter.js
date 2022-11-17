@@ -1,19 +1,12 @@
-import React, { Component } from "react";
+import React from 'react';
+import withCounter from '../HOC/withCounter';
 
-export class HoverCounter extends Component {
-  state = { count: 0 };
+const HoverCounter = ({count, incrementCount}) => {
+  return (
+    <div>
+      <h2 onMouseOver={incrementCount}>{count} Times Hovered</h2>
+    </div>
+  );
+};
 
-  incrementCount = () => {
-    this.setState((prevState) => ({ count: prevState.count + 1 }));
-  };
-  render() {
-    const { count } = this.state;
-    return (
-      <div>
-        <h2 onMouseOver={this.incrementCount}>Hover me {count}</h2>
-      </div>
-    );
-  }
-}
-
-export default HoverCounter;
+export default withCounter(HoverCounter);

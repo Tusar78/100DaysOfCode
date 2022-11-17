@@ -1,13 +1,12 @@
-import React from 'react';
-import withCounter from '../HOC/withCounter';
+import React, { Component } from 'react'
 
-const ClickCounter = ({count, incrementCount}) => {
-  console.log(count);
-  return (
-    <div>
-      <button onClick={incrementCount}>Click {count} time</button>
-    </div>
-  );
-};
+export class ClickCounter extends Component {
+  state = {count: 0};
+  render() {
+    return (
+      <div></div>
+    )
+  }
+}
 
-export default withCounter(ClickCounter);
+export default ClickCounter

@@ -1,12 +1,13 @@
 import React from 'react';
-import ClickCounter from './Components/ClickCounter';
-import HoverCounter from './Components/HoverCounter';
+import Click from './Components/Click';
+import User from './Components/User';
+import './App.css'
 
 const App = () => {
   return (
     <div>
-      <ClickCounter />
-      <HoverCounter />
+      <Click />
+      <User />
     </div>
   );
 };
