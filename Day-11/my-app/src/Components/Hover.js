@@ -12,6 +12,7 @@ const Hover = ({ count, incrementCount, theme }) => {
       : null;
   return (
     <div>
+      <button className="button">Change Theme</button>
       <h2 style={style} onMouseOver={incrementCount}>Hover At {count} times</h2>
     </div>
   );

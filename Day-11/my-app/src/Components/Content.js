@@ -12,11 +12,12 @@ const Content = () => {
         {(count, incrementCount) => {
           return (
             <ThemeContext.Consumer>
-              {({ theme }) => (
+              {({ theme, themeSwitcher }) => (
                 <Hover
                   count={count}
                   incrementCount={incrementCount}
                   theme={theme}
+                  themeSwitcher={themeSwitcher}
                 />
               )}
             </ThemeContext.Consumer>
