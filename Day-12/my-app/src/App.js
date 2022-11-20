@@ -1,10 +1,10 @@
 import React from 'react';
-import Todo from './Components/Todo';
+import HookRules from './Components/HookRules';
 
 const App = () => {
   return (
     <div>
-      <Todo />
+      <HookRules />
     </div>
   );
 };
