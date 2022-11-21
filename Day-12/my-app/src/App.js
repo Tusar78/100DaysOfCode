@@ -1,10 +1,10 @@
 import React from 'react';
-import MyComponentClass from './Components/MyComponentClass';
+import MyComponent from './Components/MyComponent';
 
 const App = () => {
   return (
     <div>
-      <MyComponentClass />
+      <MyComponent />
     </div>
   );
 };
