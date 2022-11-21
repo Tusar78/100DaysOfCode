@@ -12,7 +12,7 @@ const MyComponent = () => {
   useEffect(() => {
     document.title = `Clicked ${count} times`;
     console.log("updating!");
-  });
+  }, [count]);
 
   const tick = () => {
     setTime(new Date());
