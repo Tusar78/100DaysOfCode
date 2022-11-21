@@ -1,12 +1,10 @@
 import React from 'react';
-import Count from './Components/Count';
-import HookRules from './Components/HookRules';
+import MyComponentClass from './Components/MyComponentClass';
 
 const App = () => {
   return (
     <div>
-      <HookRules />
-      <Count />
+      <MyComponentClass />
     </div>
   );
 };
