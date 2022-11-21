@@ -14,6 +14,14 @@ const MyComponent = () => {
     console.log("updating!");
   }, [count]);
 
+  useEffect(() => {
+    const interval = setInterval(tick, 1000);
+
+    return () => {
+      clearInterval(interval)
+    }
+  }, [])
+
   const tick = () => {
     setTime(new Date());
   };
