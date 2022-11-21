@@ -1,17 +1,36 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const MyComponent = () => {
   const [time, setTime] = useState(new Date());
   const [count, setCount] = useState(0);
+  const [text, setText] = useState("");
 
   const addClick = () => {
     setCount((count) => count + 1);
+  };
+
+  useEffect(() => {
+    document.title = `Clicked ${count} times`;
+    console.log("updating!");
+  });
+
+  const tick = () => {
+    setTime(new Date());
   };
   return (
     <div>
       <p>Time: {time.toLocaleTimeString()}</p>
       <p>
-        <button type="button" onClick={addClick}>Click {count}</button>
+        <input
+          type="text"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+        />
+      </p>
+      <p>
+        <button type="button" onClick={addClick}>
+          Click {count}
+        </button>
       </p>
     </div>
   );
