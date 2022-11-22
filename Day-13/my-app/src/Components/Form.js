@@ -4,7 +4,7 @@ const Form = () => {
   const inputRef = useRef(null);
   
   useEffect(() => {
-    console.log(inputRef.current);
+    inputRef.current.focus();
   }, []);
   return (
     <div>
