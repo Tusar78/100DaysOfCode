@@ -9,8 +9,10 @@ const App = () => {
   const [count5, setCount5] = useState(0);
 
   const isEvenOrOdd = () => {
+    let i = 0;
+    while (i < 1000000000) i += 1;
     return count1 % 2 === 0;
-  }
+  };
 
   const incrementOne = useCallback(() => {
     setCount1((prevCount) => prevCount + 1);
@@ -24,7 +26,7 @@ const App = () => {
     <>
       <Title />
       <ShowCount count={count1} title="Counter one" />
-      <p>{isEvenOrOdd() ? 'Even' : 'Odd'}</p>
+      <p>{isEvenOrOdd() ? "Even" : "Odd"}</p>
       <Button increment={incrementOne}>Increment by One</Button>
       <hr />
       <ShowCount count={count5} title="Counter two" />
