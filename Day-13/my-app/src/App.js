@@ -1,13 +1,12 @@
 import React from 'react';
-import './App.css';
-import LayoutComponent from './Components/LayoutComponent';
-import LayoutComponentTwo from './Components/LayoutComponentTwo';
+import './Assets/CSS/global.css';
+import Logo from './Components/LogoPlay/Logo';
 
 const App = () => {
   return (
-    <div>
-      <LayoutComponent />
-      <LayoutComponentTwo />
+    <div className='App'>
+      <h1>Learn With Sumit</h1>
+      <Logo />
     </div>
   );
 };
