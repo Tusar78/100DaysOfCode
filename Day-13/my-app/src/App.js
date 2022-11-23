@@ -1,11 +1,11 @@
 import React from 'react';
-import Form from './Components/Form';
 import './App.css';
+import Counter from './Components/Counter';
 
 const App = () => {
   return (
     <div>
-      <Form />
+      <Counter />
     </div>
   );
 };
