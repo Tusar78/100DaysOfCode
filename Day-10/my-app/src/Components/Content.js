@@ -1,8 +1,9 @@
 import React from "react";
 import Counter from "./Counter";
 import Hover from "./Hover";
+import ThemeContext from "./ThemeContext";
 
-const Content = ({ theme }) => {
+const Content = () => {
   return (
     <div>
       <h2>This is Content Component</h2>
@@ -10,9 +11,9 @@ const Content = ({ theme }) => {
       <Counter>
         {(count, incrementCount) => {
           return (
-            <Consumer>
+            <ThemeContext.Consumer>
               {
-                (value) => (
+                ({theme}) => (
                   <Hover
                     count={count}
                     incrementCount={incrementCount}
@@ -20,7 +21,7 @@ const Content = ({ theme }) => {
                   />
                 )
               } 
-            </Consumer>
+            </ThemeContext.Consumer>
           )
         }}
       </Counter>
