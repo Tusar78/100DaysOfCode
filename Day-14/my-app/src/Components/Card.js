@@ -7,13 +7,16 @@ import {
   ContentContainer,
 } from "./Styles/Container.styles";
 import { H1, P, Tag, Image } from "./Styles/Elements.styles";
+import { StyledTitle } from "./Styles/Custom.style";
 
 const Card = () => {
   return (
     <CardContainer>
       <ContentContainer>
         <Tag bgColor="#4361ee">EXCLUSIVE</Tag>
-        <H1>React Styled Components</H1>
+        <H1>
+          <StyledTitle text="React Styled Components" color="#fff" />
+        </H1>
 
         <P>
           Exclusive React JS Tutorial on Styled Components where you will learn
