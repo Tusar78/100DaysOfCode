@@ -1,9 +1,12 @@
 import nerdImage from "../Assets/images/illustration.png";
 import React from "react";
 import Button from "./Button";
-import Image from "./Image";
-import { CardContainer, ContentContainer } from "./Styles/Container.styles";
-import { H1, P, Tag } from "./Styles/Elements.styles";
+import {
+  ButtonContainer,
+  CardContainer,
+  ContentContainer,
+} from "./Styles/Container.styles";
+import { H1, P, Tag, Image } from "./Styles/Elements.styles";
 
 const Card = () => {
   return (
@@ -16,12 +19,12 @@ const Card = () => {
           Exclusive React JS Tutorial on Styled Components where you will learn
           why we need this & how to use it.
         </P>
-        <div className="buttons">
+        <ButtonContainer>
           <Button text="Watch now" />
           <Button text="Github repo" />
-        </div>
+        </ButtonContainer>
       </ContentContainer>
-      <Image imgSrc={nerdImage} altTag="nerd" width="300px" />
+      <Image src={nerdImage} alt="nerd" width="300px" />
     </CardContainer>
   );
 };

@@ -22,4 +22,11 @@ const P = styled.p`
   margin: 20px 0;
 `;
 
-export { Tag, H1, P };
+const Image = styled.img`
+  position: absolute;
+  top: 30px;
+  right: -20px;
+  z-index: 0;
+`;
+
+export { Tag, H1, P, Image };
