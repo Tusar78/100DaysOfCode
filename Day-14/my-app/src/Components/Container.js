@@ -1,11 +1,5 @@
-import React from 'react';
-
-const Container = () => {
-  return (
-    <div>
-      
-    </div>
-  );
+const Container = ({ children }) => {
+  return children;
 };
 
 export default Container;
