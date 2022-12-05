@@ -6,6 +6,7 @@ import Navbar from "./Components/Navbar";
 import Service from "./Components/Service";
 import PageNotFound from "./Components/PageNotFound";
 import "./App.css";
+import Post from "./Components/Post";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route exact path="/home" component={Home} />
           <Route exact path="/about" component={About} />
           <Route exact path="/service" component={Service} />
+          <Route exact path="/post/:category" component={Post} />
 
           <Route exact component={PageNotFound} />
         </Switch>

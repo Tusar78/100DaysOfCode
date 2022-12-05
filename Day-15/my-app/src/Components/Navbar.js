@@ -14,6 +14,9 @@ const Navbar = () => {
         <li>
           <NavLink exact to="/service" activeStyle={{fontWeight: 'bold', color: 'red'}}>Services</NavLink>
         </li>
+        <li>
+          <NavLink exact to="/post/js" activeStyle={{fontWeight: 'bold', color: 'red'}}>Posts</NavLink>
+        </li>
       </ul>
     </nav>
   );
